@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel='stylesheet' href='/stylesheets/admin.css' />
+</head>
+
+<body>
+  <div class="content">
+    <h1>Welcome to ATN-TOY-STORE</h1>
+    <section class="section-content">
+    <div class="container">
+        <header class="section-heading">
+            <div class="topnav">
+                <a class="active" href="/homepage/">Home Page</a>
+                <a href="/toy/robot/">Robot</a>
+                <a href="/toy/rubik/">Rubik</a>
+                <a href="/toy/flycam/">flycam</a>
+            </div>
+        </header><!-- sect-heading -->
+
+        <div class="row">
+            {{#each robot }}
+                <div class="card card-product-grid">
+                    <a href="/detail/{{ _id }}" class="img-wrap"> <img src="{{ image }}" width="30px"> </a>
+                    <figcaption class="info-wrap">
+                        <a href="/detail/{{ _id }}" class="title">{{ name }}</a>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: {{ price }} vnd</li>
+                        </ul>
+                    </figcaption>
+                </div>
+            {{/each}}
+
+            {{#each rubik }}
+                <div class="card card-product-grid">
+                    <a href="/detail/{{ _id }}" class="img-wrap"> <img src="{{ image }}" width="30px"> </a>
+                    <figcaption class="info-wrap">
+                        <a href="/detail/{{ _id }}" class="title">{{ name }}</a>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Price: {{ price }} vnd</li>
+                        </ul>
+                    </figcaption>
+                </div>
+            {{/each}}
+        </div> <!-- container .//  -->
+    </div>
+</section>
+  </div>
+  
+</body>
+</html>
